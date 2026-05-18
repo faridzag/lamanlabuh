@@ -1,11 +1,301 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<Welcome />
+	<main class="page">
+		<section class="hero">
+			<div class="logo-wrap" aria-hidden="false">
+				<img src="/komdigi.png" alt="Logo Kementerian Komunikasi dan Digital" width="120" height="120" />
+			</div>
+
+			<h1 class="title">WEBSITE BLOCKED</h1>
+
+			<div class="regulations">
+				<p class="regulation">
+					<strong
+						>UNDANG-UNDANG NOMOR 19 TAHUN 2016 PASAL 40 (2a) dan (2b) TENTANG INFORMASI DAN TRANSAKSI ELEKTRONIK</strong
+					>
+					<em
+						>Indonesia Law No.19 Year 2016 Article 40 (2a) and (2b) regarding Information and Electronic Transaction</em
+					>
+				</p>
+
+				<p class="regulation">
+					<strong
+						>PERATURAN MENTERI KOMUNIKASI DAN INFORMATIKA NO.5 TAHUN 2020 TENTANG PENYELENGGARA SISTEM ELEKTRONIK
+						LINGKUP PRIVAT</strong
+					>
+					<em
+						>Regulation of The Minister of Communications and Informatics of The Republic of Indonesia Number 5 of
+						2020 on Private Electronic System Operators</em
+					>
+				</p>
+			</div>
+
+			<div class="message">
+				<p class="message-id">
+					MAAF, AKSES KE SITUS INI DIBLOKIR OLEH PEMERINTAH INDONESIA<br />
+					KARENA MENGANDUNG KONTEN NEGATIF<br />
+					YANG MELANGGAR PERATURAN PERUNDANGAN DI INDONESIA
+				</p>
+				<p class="message-en">
+					<em
+						>Sorry, access to this website has been denied by The Government of Indonesia<br />
+						due to negative content as it violates Indonesia Law</em
+					>
+				</p>
+			</div>
+
+			<div class="cta">
+				<a
+					class="btn"
+					href="https://trustpositif.komdigi.go.id/"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					CHECK DATABASE TRUSTPOSITIF
+				</a>
+				<a
+					class="btn"
+					href="https://trustpositif.komdigi.go.id/normalisasi"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					PENGAJUAN NORMALISASI
+				</a>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="footer-head">
+				<p class="footer-title">Untuk informasi lebih lanjut silahkan menghubungi:</p>
+				<p class="footer-title-en"><em>for further information, please contact:</em></p>
+			</div>
+
+			<div class="footer-contacts">
+				<div class="contact">
+					<p class="contact-label">Konten Negatif</p>
+					<p class="contact-label-en"><em>Negative Content</em></p>
+					<p class="contact-email">
+						<a href="mailto:aduankonten@mail.kominfo.go.id">aduankonten@mail.kominfo.go.id</a>
+					</p>
+				</div>
+
+				<div class="contact">
+					<p class="contact-label">Pendaftaran PSE:</p>
+					<p class="contact-label-en"><em>Electronic System Operators Registration:</em></p>
+					<p class="contact-email">
+						<a href="mailto:aduanpseprivat@kominfo.go.id">aduanpseprivat@kominfo.go.id</a>
+					</p>
+				</div>
+			</div>
+		</footer>
+	</main>
 </Layout>
+
+<style>
+	:root {
+		--red: #a40718;
+		--red-deep: #8a0413;
+		--surface-muted: #e8edef;
+		--white: #ffffff;
+	}
+
+	.page {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+	}
+
+	/* Hero */
+	.hero {
+		background: var(--red);
+		color: var(--white);
+		padding: 32px 20px 56px;
+		text-align: center;
+		flex: 1 0 auto;
+	}
+
+	.logo-wrap {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		background: var(--white);
+		padding: 12px;
+		border-radius: 4px;
+		margin: 0 auto 28px;
+		box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+	}
+
+	.logo-wrap img {
+		width: 110px;
+		height: auto;
+	}
+
+	.title {
+		font-size: clamp(2.2rem, 6vw, 3.5rem);
+		font-weight: 800;
+		font-style: italic;
+		letter-spacing: 0.02em;
+		margin: 0 0 24px;
+		line-height: 1.1;
+	}
+
+	.regulations {
+		max-width: 1080px;
+		margin: 0 auto 28px;
+		display: flex;
+		flex-direction: column;
+		gap: 18px;
+	}
+
+	.regulation {
+		margin: 0;
+		font-size: clamp(0.85rem, 1.6vw, 1rem);
+		line-height: 1.45;
+	}
+
+	.regulation strong {
+		display: block;
+		font-weight: 700;
+		letter-spacing: 0.02em;
+	}
+
+	.regulation em {
+		display: block;
+		font-weight: 400;
+		font-style: italic;
+		opacity: 0.95;
+		margin-top: 4px;
+	}
+
+	.message {
+		max-width: 920px;
+		margin: 0 auto 36px;
+	}
+
+	.message-id {
+		font-size: clamp(1rem, 2.2vw, 1.35rem);
+		font-weight: 500;
+		letter-spacing: 0.02em;
+		margin: 0 0 12px;
+		line-height: 1.45;
+	}
+
+	.message-en {
+		font-size: clamp(0.85rem, 1.6vw, 1rem);
+		margin: 0;
+		line-height: 1.45;
+		opacity: 0.95;
+	}
+
+	.message-en em {
+		font-style: italic;
+	}
+
+	/* CTA */
+	.cta {
+		display: flex;
+		gap: 16px;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.btn {
+		display: inline-block;
+		padding: 12px 22px;
+		border: 1.5px solid var(--white);
+		border-radius: 4px;
+		color: var(--white);
+		background: transparent;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 0.95rem;
+		letter-spacing: 0.04em;
+		transition:
+			background-color 150ms ease,
+			color 150ms ease;
+	}
+
+	.btn:hover,
+	.btn:focus-visible {
+		background: var(--white);
+		color: var(--red);
+		outline: none;
+	}
+
+	.btn:focus-visible {
+		box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4);
+	}
+
+	/* Footer */
+	.footer {
+		background: var(--surface-muted);
+		color: var(--red-deep);
+		padding: 36px 20px 32px;
+	}
+
+	.footer-head {
+		text-align: center;
+		margin-bottom: 24px;
+	}
+
+	.footer-title {
+		font-size: clamp(1rem, 1.8vw, 1.15rem);
+		font-weight: 600;
+		margin: 0 0 4px;
+	}
+
+	.footer-title-en {
+		font-size: clamp(0.85rem, 1.4vw, 0.95rem);
+		margin: 0;
+		opacity: 0.9;
+	}
+
+	.footer-contacts {
+		max-width: 1080px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 24px;
+		text-align: center;
+	}
+
+	.contact-label {
+		font-weight: 600;
+		margin: 0;
+	}
+
+	.contact-label-en {
+		font-size: 0.9rem;
+		margin: 2px 0 6px;
+		opacity: 0.9;
+	}
+
+	.contact-email {
+		font-weight: 700;
+		margin: 0;
+		word-break: break-all;
+	}
+
+	.contact-email a {
+		text-decoration: none;
+	}
+
+	.contact-email a:hover,
+	.contact-email a:focus-visible {
+		text-decoration: underline;
+	}
+
+	@media (max-width: 600px) {
+		.footer-contacts {
+			grid-template-columns: 1fr;
+		}
+
+		.btn {
+			width: 100%;
+			max-width: 320px;
+		}
+	}
+</style>

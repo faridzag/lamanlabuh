@@ -9,9 +9,13 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "start": "bunx serve dist -p ${PORT:-3000} -s",
     "astro": "astro"
   },
   "dependencies": {
     "astro": "^6.3.3"
+  },
+  "devDependencies": {
+    "serve": "^14.2.5"
   }
 }
