@@ -1,0 +1,10 @@
+.git
+.gitignore
+.vscode
+.astro
+node_modules
+dist
+docs
+README.md
+CONTENT.md
+CONTEXT.md
