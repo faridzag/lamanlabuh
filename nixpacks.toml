@@ -19,7 +19,7 @@ cacheDirectories = ['/root/.bun']
 paths = ['/app/node_modules/.bin']
 
 [phases.setup]
-nixPkgs = ['nodejs_20', 'bun']
+nixPkgs = ['nodejs_18', 'bun']
 nixOverlays = [
     'https://github.com/railwayapp/nix-npm-overlay/archive/main.tar.gz',
 ]
